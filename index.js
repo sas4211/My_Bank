@@ -79,6 +79,7 @@ async function BankService(Bank) {
         let account = myBank.accounts.find((acc) => acc.AccountNumber == res.num);
         if (!account) {
             console.log(chalk.bold.red("Account not found"));
+            process.exit;
         }
         if (account) {
             let name = myBank.customers.find((item) => item.AccountNumber === account.AccountNumber);
@@ -102,6 +103,7 @@ async function BankService(Bank) {
         let account = myBank.accounts.find((acc) => acc.AccountNumber == res.num);
         if (!account) {
             console.log(chalk.bold.red("Account not found"));
+            process.exit;
         }
         if (account) {
             let name = myBank.customers.find((item) => item.AccountNumber === account.AccountNumber);
@@ -125,6 +127,7 @@ async function BankService(Bank) {
         let account = myBank.accounts.find((acc) => acc.AccountNumber == res.num);
         if (!account) {
             console.log(chalk.bold.red("Account not found"));
+            process.exit;
         }
         if (account) {
             let name = myBank.customers.find((item) => item.AccountNumber === account.AccountNumber);

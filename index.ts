@@ -107,6 +107,7 @@ if(service.option === "Check Balance"){
     
         if(!account){
             console.log(chalk.bold.red("Account not found"));
+            process.exit
         }
         if (account){
             let name = myBank.customers.find(
@@ -134,6 +135,7 @@ if(service.option === "Check Balance"){
                 let account :any = myBank.accounts.find((acc)=>acc.AccountNumber == res.num)
                 if(!account){
                     console.log(chalk.bold.red("Account not found"));
+                    process.exit
                     }
                     if (account){
                         let name = myBank.customers.find(
@@ -161,6 +163,7 @@ if(service.option === "Check Balance"){
                         let account :any = myBank.accounts.find((acc)=>acc.AccountNumber == res.num)
                         if(!account){
                             console.log(chalk.bold.red("Account not found"));
+                            process.exit
                             }
                             if (account){
                                 let name = myBank.customers.find(
@@ -181,5 +184,7 @@ if(service.option === "Check Balance"){
 
 ;
 }}
+
+
         BankService(myBank);
 
